@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="initial-scale=1, width=device-width" />
+
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lemon:wght@400&display=swap" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Londrina+Solid:wght@400&display=swap" />
+
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Londrina+Solid:wght@400&display=swap" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lemon:wght@400&display=swap" />
+
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Londrina Solid:wght@400&display=swap" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lemon:wght@400&display=swap" />
+
+  <!-- jQuery -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+  <style>
+    body {
+      margin: 0;
+      background-color: #fccf7a;
+    }
+
+    img {
+      height: 728px;
+      position: absolute;
+      margin: 0;
+      bottom: 10px;
+      left: 500px;
+    }
+
+    #animals {
+      height: 728px;
+      position: absolute;
+      margin: 0;
+      bottom: 10px;
+      left: 5px;
+    }
+
+    .title-wrapper {
+      height: 188.3px;
+      flex: 1;
+      position: absolute;
+      top: 60px;
+      line-height: 75px;
+      display: inline-block;
+      text-shadow: 5px 0 0#fff;
+      max-width: 100%;
+      z-index: 1;
+      background-clip: text;
+    }
+
+    .play {
+      position: absolute;
+      line-height: 80px;
+      display: inline-block;
+      min-width: 114px;
+      cursor: pointer;
+      box-shadow: 10px 10px 4px rgba(0, 0, 0, 0.25);
+      border-radius: 50px;
+      background: linear-gradient(180deg, #5a2a1f, #c05a43);
+      display: flex;
+      flex-direction: row;
+      align-items: flex-start;
+      justify-content: flex-start;
+      padding: 20px 50px;
+      z-index: 1;
+      background-color: #4CAF50;
+      border: none;
+      color: white;
+      padding: 15px 32px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 60px;
+      margin: 4px 2px;
+      transition: background-color 0.3s, transform 0.3s;
+      border-radius: 50px;
+    }
+
+    .play:hover {
+      background-color: #45a049;
+      transform: scale(1.1);
+    }
+
+    .play:active {
+      background-color: #397d3d;
+      transform: scale(1.05);
+    }
+
+    .play-again {
+
+      position: absolute;
+
+      line-height: 80px;
+
+      display: inline-block;
+
+      min-width: 114px;
+
+      cursor: pointer;
+
+      box-shadow: 10px 10px 4px rgba(0, 0, 0, 0.25);
+
+      border-radius: 50px;
+
+      background: linear-gradient(180deg, #5a2a1f, #c05a43);
+
+      display: flex;
+
+      flex-direction: row;
+
+      align-items: flex-start;
+
+      justify-content: flex-start;
+
+      padding: 20px 50px;
+
+      z-index: 1;
+
+      background-color: #4CAF50;
+
+      border: none;
+
+      color: white;
+
+      padding: 15px 32px;
+
+      text-align: center;
+
+      text-decoration: none;
+
+      display: inline-block;
+
+      font-size: 60px;
+
+      margin: 4px 2px;
+
+      transition: background-color 0.3s, transform 0.3s;
+
+      border-radius: 50px;
+
+    }
+
+
+    .play-again:hover {
+      background-color: #45a049;
+      transform: scale(1.1);
+    }
+
+    .play-again:active {
+      background-color: #397d3d;
+      transform: scale(1.05);
+    }
+
+    .play-again-wrapper {
+      display: flex;
+      box-sizing: border-box;
+      width: 330px;
+      flex-direction: row;
+      align-items: flex-start;
+      justify-content: center;
+      padding: 0 0 0 3px;
+      max-width: 100%;
+      font-size: 100px;
+      color: transparent;
+      font-family: "Londrina Solid";
+    }
+
+    .play-wrapper,
+    .main {
+      display: flex;
+      box-sizing: border-box;
+    }
+
+    .play-wrapper {
+      width: 575px;
+      flex-direction: row;
+      align-items: flex-start;
+      justify-content: center;
+      padding-bottom: 2cm;
+      max-width: 100%;
+      font-size: 100px;
+      color: #fff;
+      font-family: "Londrina Solid";
+    }
+
+    .main {
+      width: 100%;
+      position: absolute;
+      background-color: #fccf7a;
+      overflow: hidden;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+      padding: 58px 21px 72px 40px;
+      gap: 700px;
+      line-height: normal;
+      letter-spacing: normal;
+      text-align: center;
+      font-size: 60px;
+      color: #5a2a1f;
+      font-family: Lemon;
+    }
+
+    .play {
+      margin-bottom: 4cm;
+    }
+
+    @media screen and (max-width: 750px) {
+      .guess-the-animal-container {
+        font-size: 40px;
+        line-height: 45px;
+      }
+
+      .play {
+        font-size: 56px;
+        line-height: 64px;
+      }
+
+      .play-again {
+        font-size: 56px;
+        line-height: 64px;
+      }
+    }
+
+    @media screen and (max-width: 675px) {
+      .main {
+        gap: 331px;
+      }
+    }
+
+    @media screen and (max-width: 450px) {
+      .guess-the-animal-container {
+        font-size: 24px;
+        line-height: 30px;
+      }
+
+      .play {
+        font-size: 42px;
+        line-height: 48px;
+      }
+
+      .play-again {
+        font-size: 42px;
+        line-height: 48px;
+      }
+
+      .main {
+        gap: 165px;
+      }
+      
+    }
+  </style>
+</head>
+
+<body id="body">
+  <div class="main">
+    <div class="q26w-b4fz-230703-removebg-prev-parent" >
+      <img class="q26w-b4fz-230703-removebg-prev-icon" loading="lazy" alt=""
+        src="static/q26w_b4fz_230703-removebg-preview 1(1).png"
+        data-scroll-to="q26wB4fz230703RemovebgPrevImage" style="height: 20cm; margin-left: 6.5cm; margin-bottom: 2cm;"/>
+
+      <div class="guess-the-animal-container">
+        <p class="guess">Guess the Animal</p>
+      </div>
+    </div>
+    <div class="play-wrapper">
+      <div class="play" id="playText">Play</div>
+    </div>
+    
+  </div>
+
+  <script>
+      let body = document.querySelector("#body");
+      let result_arr = []; 
+      let img_hewan = {
+        'Bebek': 'static/Bebek.jpg',
+        'Buaya': 'static/Buaya.jpg',
+        'Burung': 'static/Burung.jpg',
+        'Gajah': 'static/Gajah.jpg',
+        'Gorila': 'static/Gorila.jpg',
+        'Harimau': 'static/Harimau.jpg',
+        'Ikan': 'static/Ikan.jpg',
+        'Kelelawar': 'static/Kelelawar.jpg',
+        'Kelinci': 'static/Kelinci.jpg',
+        'Kucing': 'static/Kucing.jpg',
+        'Kuda': 'static/Kuda.jpg',
+        'Kura-kura': 'static/Kura-kura.jpg',
+        'Paus': 'static/Paus.jpg',
+        'Pinguin': 'static/Pinguin.jpg',
+        'Ular': 'static/Ular.jpg'
+      }
+
+      //generate hasil menggunakan di python
+      function sendResult(resultt) {
+            $.ajax({
+                url: '/process_result',
+                type: 'POST',
+                contentType: 'application/json',
+                data: JSON.stringify({'result': resultt}),
+                success: function(response) {
+                    document.getElementById('animal_name').innerHTML = response.animal;
+                    updateAnimalImage(response.animal);
+                },
+                error: function(error) {
+                    console.log(error);
+                }
+            });
+      }
+
+      //untuk menampilkan foto berdasarkan nama hewannya
+      function updateAnimalImage(animalName) {
+          let imgSrc = img_hewan[animalName];
+          if (imgSrc) {
+              // Update the image source
+              document.getElementById('animal_image').src = imgSrc;
+          }
+      }
+      
+      // page result
+      function showResult() {
+            sendResult(result_arr);
+
+            document.body.innerHTML = `
+            <div class="result" style="display: flex;flex-direction: column;align-items: center;justify-content: center;text-align: center;width: 100%;height: 100%; background-colour:red;">
+                <div class="i-think-of-parent" style="margin-top: 2cm; display: flex;flex-direction: column;align-items: center;">
+                    <div class="i-think-of" style="font-size: 48px; font-family: 'Londrina Solid';margin-bottom: 20px;">I THINK OF</div>
+                    <div class="animal-name" id="animal_name" style="font-size: 72px; font-family: Lemon; margin-bottom: 20px;">Animal Name</div>
+                    <img id="animal_image" src="" alt="animal image" style="display: block; margin-left: auto; margin-right: auto;margin-bottom: 250px;width: 800px; height: 650px;">
+                    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+                    <div class="play-again-wrapper" style="margin-top: 20px;">
+                        <div class="play-again" id="playAgainText">Play again</div>
+                    </div>
+                    <p id="find-new-animal" style="font-family: 'Londrina Solid';color: #5a2a1f;margin-top:120px;font-size: 48px; width: 800px;">
+                      Can't find the animal you're thinking of?
+                    </p>
+
+                </div>
+            </div>
+            `;
+
+            //kembali ke halaman utama utk main lagi
+            document.querySelector('#playAgainText').addEventListener('click', () => {
+                window.location.href = "/home";
+            });
+
+            // page add new animal
+            document.querySelector('#find-new-animal').addEventListener('click', () => {
+              document.body.innerHTML = `
+              <div class="result" style="display: flex;flex-direction: column;align-items: center;justify-content: center;text-align: center;width: 100%;height: 100%; background-colour:red;">
+                <div class="i-think-of-parent" style="margin-top: 10cm; display: flex;flex-direction: column;align-items: center;">
+                    <div class="i-think-of" style="font-size: 80px; font-family: 'Londrina Solid';margin-bottom: 20px;">Input your animal name</div>
+                    <input type="text" id="new-animal" style="font-size:32px; font-family: 'Londrina Solid'; border: 5px solid #5a2a1f; border-radius: 50px; line-height: 80px; min-width: 500px; background-color: #ffe4b1;">
+                    <div class="play-again-wrapper" style="margin-top: 100px;">
+                        <button type="submit" value="Submit" class="play-again" id="submit-animal">Submit</button>
+                    </div>
+                </div>
+              </div>
+              `;
+              const click_submit = document.querySelector("#submit-animal");
+              if (click_submit) {
+                  click_submit.addEventListener('click', () => {
+                      addNew();
+                  });
+              }
+            })   
+      }
+
+      function addNew(){
+        let new_animal = document.querySelector("#new-animal").value;
+        console.log(new_animal);
+        let result_new = result_arr;
+        let add_new_animal = [new_animal, ...result_new];
+        $.ajax({
+            url: "/add_newAnimal",
+            type: "POST",
+            contentType: "application/json",
+            data: JSON.stringify({"result": add_new_animal}),
+            success: function(response) {
+                window.location.href = "/home";
+            },
+            error: function(error) {
+                console.log(error);
+            }
+        });
+      }
+
+      document.addEventListener('DOMContentLoaded', function() {
+            var playText = document.getElementById("playText");
+            if (playText) {
+                playText.addEventListener("click", function(e) {
+                    body.innerHTML = `
+                    <div class="questions">
+                        <div class="title-wrapper" style="font-family: 'Londrina Solid'; font-size: 48px; margin-bottom: 7cm; margin-left: 24.5cm;">
+                            Think of one animal from the animals below
+                        </div>
+                        <img id="animals" src="static/animal-list.jpg" alt="animals"  style="margin-bottom: 7cm; margin-left: 17cm;">
+                        <div class="ready-wrapper">
+                            <button class="play" id="readyText" style="font-family: 'Londrina Solid'; margin-top: 25cm; margin-bottom: 7cm; margin-left: 31.5cm;">Ready?</button>
+                        </div>
+                    </div>
+                    `;
+
+                    var readyText = document.getElementById("readyText");
+                    readyText.addEventListener("click", function() {
+                        document.querySelector(".questions").innerHTML = `
+                        <div class="frame-parent" style="font-family: 'Londrina Solid'; margin-top: 10cm;">
+                            <div class="question-here-wrapper" style="background-colour: white;">
+                                <div class="question-here" style="width: 27cm; font-family: 'Londrina Solid'; font-size: 60px; margin-left: 15cm;">
+                                    1. Apakah hewan ini berkaki 4?
+                                </div>
+                            </div>
+                            
+                            <div class="frame-wrapper"style="font-size: 52px;">
+                                <div class="frame-group" style="margin-left: 21.5cm;">
+                                    <div class="yes-wrapper" style="margin:30px;">
+                                        <div id="yes" class="yes">Yes</div>
+                                    </div>
+                                    <div class="no-wrapper" style="margin: 30px;">
+                                        <div id="no" class="no">No</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="questions-inner" style="margin-left: 30cm;">
+                            <div class="frame-container">
+                                <img class="a2ed26-9208-4c8b-bc3f-975348bb-icon" loading="lazy" alt="" style="margin-left: 27cm; margin-bottom: 5cm;"
+                                    src="{{ url_for('static', filename='_12a2ed26-9208-4c8b-bc3f-975348bbe682-removebg-preview 1.png') }}" />
+                            </div>
+                        </div>`;
+
+                        const questionslist = [
+                            "Apakah hewan ini berkaki 4?",
+                            "Apakah hewan ini berkaki 2?",
+                            "Apakah hewan ini berkaki 0?",
+                            "Apakah hewan ini hidup di darat?",
+                            "Apakah hewan ini hidup di udara?",
+                            "Apakah hewan ini hidup di air?",
+                            "Apakah hewan ini termasuk herbivora?",
+                            "Apakah hewan ini termasuk karnivora?",
+                            "Apakah hewan ini termasuk omnivora?",
+                            "Apakah hewan ini berukuran besar?",
+                            "Apakah hewan ini berukuran kecil?",
+                            "Apakah hewan ini berkembang biak secara vivipar?",
+                            "Apakah hewan ini berkembang biak secara ovipar?",
+                            "Apakah hewan ini berkembang biak secara ovovivipar?",
+                            "Apakah hewan ini memiliki belalai panjang dan gading?",
+                            "Apakah hewan ini memiliki belang hitam pada tubuh?",
+                            "Apakah hewan ini memiliki paruh dan sayap untuk terbang?",
+                            "Apakah hewan ini memiliki telinga panjang?",
+                            "Apakah hewan ini tidak memiliki kaki dan tubuh panjang?",
+                            "Apakah hewan ini memiliki sirip dan ekor?",
+                            "Apakah hewan ini memiliki paruh pipih dan kaki berselaput?",
+                            "Apakah hewan ini memiliki rambut di belakang kepala?",
+                            "Apakah hewan ini memiliki kumis dan cakar tajam?",
+                            "Apakah hewan ini memiliki mulut lebar dan gigi tajam?",
+                            "Apakah hewan ini memiliki cangkang yang keras dan lembut?",
+                            "Apakah hewan ini memiliki sayap dan tidur terbalik?",
+                            "Apakah hewan ini memiliki sayap kecil dan berjalan?",
+                            "Apakah hewan ini memiliki lubang hidung dengan posisi lubang hidung menghadap ke atas?",
+                            "Apakah hewan ini memiliki wajah lebar namun mata yang kecil ?"
+                        ];
+
+                        let nomor = 1;
+                        let questionsCounter = 0;
+                        let questionsHere = document.querySelector(".question-here");
+                        let yes = document.querySelector("#yes");
+                        let no = document.querySelector("#no");
+
+                        function nextQuestion() {
+                            if (questionsCounter < questionslist.length) {
+                                questionsHere.innerHTML = nomor + ". " + questionslist[questionsCounter];
+                                nomor++;
+                                questionsCounter++;
+                            } else {
+                                showResult();
+                            }
+                        }
+
+                        yes.addEventListener("click", () => {
+                            result_arr.push(1);
+                            nextQuestion();
+                            console.log(result_arr);
+                        });
+
+                        no.addEventListener("click", () => {
+                            result_arr.push(0);
+                            nextQuestion();
+                            console.log(result_arr);
+                        });
+
+                        nextQuestion(); // Tampilkan pertanyaan pertama
+                    });
+                });
+            }
+      });
+  </script>
+</body>
+
+</html>

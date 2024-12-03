@@ -1,0 +1,17 @@
+Nama hewan,Apakah hewan ini berkaki 4?,Apakah hewan ini berkaki 2?,Apakah hewan ini berkaki 0?,Apakah hewan ini hidup di darat?,Apakah hewan ini hidup di udara?,Apakah hewan ini hidup di air?,Apakah hewan ini termasuk herbivora?,Apakah hewan ini termasuk karnivora?,Apakah hewan ini termasuk omnivora?,apakah hewan ini berukuran besar?,apakah hewan ini berukuran kecil?,apakah hewan ini vivipar?,apakah hewan ini ovipar?,apakah hewan ini ovovivipar?,Apakah hewan ini memiliki belalai panjang dan gading?,Apakah hewan ini memiliki belang hitam pada tubuh?,Apakah hewan ini memiliki paruh dan sayap untuk terbang?,Apakah hewan ini memiliki telinga yang panjang?,Apakah hewan mencium menggunakan lidahnya?,Apakah hewan ini memiliki insang?,Apakah hewan ini memiliki paruh pipih dan kaki berselaput?,Apakah hewan ini memiliki rambut di belakang kepala?,Apakah hewan ini memiliki kumis dan cakar tajam?,Apakah hewan ini memiliki mulut lebar dan gigi tajam?,Apakah hewan ini memiliki cangkang yang keras dan lembut?,Apakah hewan ini memiliki sayap dan tidur terbalik?,Apakah hewan ini memiliki sayap kecil dan berjalan?,Apakah hewan ini memiliki lubang hidung dengan posisi lubang hidung menghadap ke atas?,Apakah hewan ini memiliki wajah lebar namun mata yang kecil ?
+Gajah,1,0,0,1,0,0,1,0,0,1,0,1,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Harimau,1,0,0,1,0,0,0,1,0,1,0,1,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0
+Burung,0,1,0,0,1,0,0,0,1,0,1,0,1,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0
+Kelinci,1,0,0,1,0,0,1,0,0,0,1,1,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0
+Ular,0,0,1,1,0,0,0,1,0,0,1,0,0,1,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0
+Ikan,0,0,1,0,0,1,0,1,0,0,1,0,1,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0
+Bebek,0,1,0,0,0,1,0,0,1,0,1,0,1,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0
+Kuda,1,0,0,1,0,0,1,0,0,1,0,1,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0
+Kucing,1,0,0,1,0,0,0,1,0,0,1,1,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0
+Buaya,1,0,0,0,0,1,0,1,0,1,0,0,1,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0
+Kura-kura,1,0,0,1,0,0,1,0,0,0,1,0,1,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0
+Kelelawar,0,1,0,0,1,0,0,0,1,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0
+Pinguin,0,1,0,0,0,1,0,1,0,0,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0
+Paus,0,0,1,0,0,1,1,0,0,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0
+Gorila,0,1,0,1,0,0,0,0,1,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1
+Panda,1,0,0,1,0,0,1,0,0,1,0,1,0,0,0,1,0,0,0,0,0,0,0,1,0,0,0,0,1
